@@ -12,6 +12,8 @@
     .sorting-button {
         font-size: 1.2rem;
         text-underline-offset: 0.3rem;
+        background-color: var(--background);
+        border: none;
 
         text-decoration: underline;
         color: var(--primary);
@@ -59,29 +61,22 @@
         </header>
         <ul>
             <li>
-                &gt; <a class="sorting-button"
-                    href="www.tanishqjoshi.github.io/Sorting-Algorithm-Visualiser/bubble-sort.html" id="bubble-sort">
-                    Bubble Sort &rarr;</a>
+                &gt; <button class="sorting-button" id="bubble-sort">
+                    Bubble Sort &rarr;</button>
             </li>
             <li>
-                &gt; <a class="sorting-button"
-                    href="www.tanishqjoshi.github.io/Sorting-Algorithm-Visualiser/merge-sort.html" id="merge-sort">Merge
-                    Sort &rarr;</a>
+                &gt; <button class="sorting-button" id="merge-sort">Merge
+                    Sort &rarr;</button>
             </li>
             <li>
-                &gt; <a class="sorting-button"
-                    href="www.tanishqjoshi.github.io/Sorting-Algorithm-Visualiser/quick-sort.html" id="quick-sort">Quick
-                    Sort &rarr;</a>
+                &gt; <button class="sorting-button" id="quick-sort">Quick
+                    Sort &rarr;</button>
             </li>
             <li>
-                &gt; <a class="sorting-button"
-                    href="www.tanishqjoshi.github.io/Sorting-Algorithm-Visualiser/insertion-sort.html"
-                    id="insertion-sort">Insertion Sort &rarr;</a>
+                &gt; <button class="sorting-button" id="insertion-sort">Insertion Sort &rarr;</button>
             </li>
             <li>
-                &gt; <a class="sorting-button"
-                    href="www.tanishqjoshi.github.io/Sorting-Algorithm-Visualiser/selection-sort.html"
-                    id="selection-sort">Selection Sort &rarr;</a>
+                &gt; <button class="sorting-button" id="selection-sort">Selection Sort &rarr;</button>
             </li>
 
         </ul>
@@ -91,5 +86,22 @@
         </footer>
     </div>
 </body>
+<script>
+    document.getElementById("bubble-sort").addEventListener("click", () => {
+        window.location.href = "bubble-sort.html";
+    });
+    document.getElementById("merge-sort").addEventListener("click", () => {
+        window.location.href = "merge-sort.html";
+    });
+    document.getElementById("quick-sort").addEventListener("click", () => {
+        window.location.href = "quick-sort.html";
+    });
+    document.getElementById("insertion-sort").addEventListener("click", () => {
+        window.location.href = "insertion-sort.html";
+    });
+    document.getElementById("selection-sort").addEventListener("click", () => {
+        window.location.href = "selection-sort.html";
+    });
+</script>
 
 </html>
