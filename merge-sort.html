@@ -1,96 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="globals.css">
     <title>Merge Sort Visualizer</title>
 </head>
-<style>
-    body {
-        font-size: 1.5rem;
-    }
-    .container {
-        margin-top: 100px;
-        margin-right: auto;
-        margin-left: auto;
-        width: 80%;
-        min-width: 360px;
-    }
-    .array-input-lable {
-        display: block;
-        margin-bottom: 10px;
-    }
-    .array-input {
-        display: block;
-        height: 50px;
-        box-sizing: border-box;
-        outline: none;
-        width: 600px;
-        max-width: 100%;
-        padding-left: 10px;
-        border-radius: 5px;
-        border: 1px solid black;
-        font: inherit;
-        margin-bottom: 10px;
-    }
-    .submit-array {
-        height: 40px;
-        border-radius: 5px;
-        border: none;
-        color: white;
-        background-color: #09a0aa;
-        font: inherit;
-        width: 600px;
-        max-width: 100%;
-    }
-    .submit-array:hover {
-        background-color: #06585e;
-        transform: scale(1.02);
-    }
-    .array-input:focus {
-        border: 1px solid #09a0aa;
-        box-shadow: 0 0 5px #09a0aa;
-    }
-    .input-error {
-        color: red;
-    }
-    .array {
-        display: flex;
-        flex-wrap: wrap;
-        margin-bottom: 10px;
-    }
-    .array-element {
-        box-sizing: border-box;
-        height: 50px;
-        padding: 10px;
-        border: 1px solid black;
-        border-radius: 5px;
-        margin-right: 10px;
-        margin-bottom: 10px;
-    }
-    .array-element.sorted {
-        background-color: #8bc34a;
-    }
-    .array-element.comparing {
-        border-color: blue;
-        box-shadow: 0 0 5px blue;
-    }
-    .merging {
-        color: blue;
-    }
-</style>
+
 <body>
     <div class="container">
-        <h2>Merge Sort Visualizer</h2>
-        <h3>Array Input</h3>
+        <header>
+            <h1>Merge Sort Visualizer</h1>
+            <p class="text-muted">Merge Sort is an efficient sorting algorithm that uses the divide-and-conquer method.
+                It divides the list, sorts each half, and merges them to obtain the final sorted result. With a time
+                complexity of O(n log n), Merge Sort is suitable for sorting large datasets while maintaining stability
+                in the order of equal elements.</p>
+        </header>
+        <h2>Array Input</h2>
         <input class="array-input" id="array-input" placeholder="Enter numbers, separated by spaces...">
         <button class="submit-array" id="submit-array">Sort</button>
         <div class="input-error" id="input-error"></div>
-        <h3>Array Output</h3>
+        <h2>Array Output</h2>
         <div class="array" id="array"></div>
         <div class="status" id="status"></div>
-        <h6>Developed with ❤️ & ☕️ by Tanishq</h6>
+        <footer>
+            <hr>
+            <p>Developed with ❤️ & ☕️ by Tanishq</p>
+        </footer>
     </div>
     <script>
         const sleep = async (ms) => {
@@ -194,4 +132,5 @@
         document.getElementById('submit-array').addEventListener('click', mergeSortWrapper);
     </script>
 </body>
+
 </html>
